@@ -1,0 +1,159 @@
+:root {
+  --primary: #1e3a8a;   /* bleu foncé — couleur principale */
+  --accent: #3b82f6;    /* bleu clair — couleur d'accent */
+  --bg: #f8fafc;        /* fond de la page */
+  --text: #1f2937;      /* couleur du texte */
+}
+
+
+ body{
+    background-color: var(--bg);
+   padding:0;
+   font-size:16px;
+   color:var(--text);
+   
+   font-family:Poppins ,  sans-serif;
+}
+h1{
+    color:var(--primary);
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:16px 30px;
+    background-color:var(--primary);
+    color:white;
+}
+nav span{
+    color:white ;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/* Hero */
+.hero {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hero .nom {
+  color: #93c5fd;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Bouton */
+.btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+/* Compétences */
+.competences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge-comp {
+  background-color: var(--accent);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Projets */
+.projets {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.carte-projet {
+  flex: 1 1 280px;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.carte-projet h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.carte-projet a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.carte-projet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+
+  /* Hero plus petit sur mobile */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Navigation en colonne */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Projets en colonne */
+  .projets {
+    flex-direction: column;
+  }
+
+  /* Compétences plus petites */
+  .badge-comp {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
